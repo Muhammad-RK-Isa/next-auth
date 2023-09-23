@@ -108,6 +108,7 @@ const LoginPage = () => {
         </form>
       </Form>
       <div className="mt-4 flex items-center gap-2">
+        <Button variant="outline" onClick={() => router.push('/registration')}>Register</Button>
         <Button variant="outline" onClick={() => signIn("google")}>Continue with Google</Button>
         <Button variant="outline" onClick={() => signIn("github")}>Continue with Github</Button>
         <Button variant="destructive" onClick={() => signOut()}>Sign Out</Button>

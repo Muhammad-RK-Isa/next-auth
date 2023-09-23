@@ -30,7 +30,13 @@ export async function POST(
             }
         })
 
-        return NextResponse.json(user)
+        return NextResponse.json({
+            id: user.id,
+            name: user.name,
+            image: user.image,
+            email: user.email,
+            emailVerified: user.emailVerified,
+        })
 
     } catch (error) {
         console.error("[REGISTRATION_POST")

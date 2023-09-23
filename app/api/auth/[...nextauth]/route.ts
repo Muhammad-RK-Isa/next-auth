@@ -62,7 +62,7 @@ export const authOptions: NextAuthOptions = {
           ...token,
           id: u.id,
         }
-      } 
+      }
       return token
     },
     session({ session, token }) {
@@ -74,6 +74,12 @@ export const authOptions: NextAuthOptions = {
         }
       }
     },
+    redirect() {
+      return '/'
+    },
+  },
+  pages: {
+    signIn: "/login",
   },
   debug: process.env.NODE_ENV === "development"
 }
